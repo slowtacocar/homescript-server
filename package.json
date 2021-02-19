@@ -1,0 +1,29 @@
+{
+  "name": "homescript-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "firebase-admin": "^9.5.0",
+    "lodash": "^4.17.20",
+    "node-schedule": "^2.0.0",
+    "suncalc": "^1.8.0",
+    "vm2": "^3.9.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "node": true,
+      "es2020": true
+    }
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0"
+  }
+}
