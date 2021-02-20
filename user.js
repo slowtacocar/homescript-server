@@ -1,6 +1,5 @@
 const getTriggers = require("./lib/triggers");
 const getDevices = require("./lib/devices");
-const functions = require("./lib/functions");
 const { VM } = require("vm2");
 
 module.exports = class User {
@@ -44,7 +43,7 @@ module.exports = class User {
       data.trigger.params
     );
     this.scripts[doc.id].run(() => {
-      const vm = new VM({ sandbox: { ...this.devices, ...functions } });
+      const vm = new VM({ sandbox: this.devices });
       vm.run(`(async () => {${data.script}})()`);
     });
   }
